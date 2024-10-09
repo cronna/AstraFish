@@ -13,7 +13,7 @@ use app\repository\ClientsRepository;
  * @var $distributions
  */
 
-$this->title = 'Выдачи';
+$this->title = 'Продажи';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="distributions-index">
@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Выдать книгу', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать продажу', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <table class='table'>
@@ -34,11 +34,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <td>Дата</td>
 
-            <td>Книга</td>
+            <td>Товар</td>
 
             <td>Сотрудник</td>
 
             <td>Клиент</td>
+
+            <td>Сумма</td>
 
             <td> </td>
 
@@ -52,6 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <td><?= StaffRepository::getStaffById($dist->staff_id)->fio ?></td>
                 <td><?= CLientsRepository::getClientById($dist->client_id)->fio ?></td>
                 <td><?= Html::a('Оформить возврат', ['/refunds/create?dist_id=' . $dist->id], ['class' => 'btn btn-success']);?></td>
+                <td><?= BooksRepository::getBookById($dist->book_id)->price ?></td>
                 <td>
                     <a href="delete?id=<?= $dist->id ?>"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAnElEQVR4nOXQMQ4BURSF4T+htYRZBCV7EOWUojYltRIle2AjLISWnoRkNCrVPedKBH9yy3e+5MG/NAPql5s7Q/Wb7nPAb7ROfM0qAkwTwCQClAmgjAC9BNCNAEUCKCJAA7gZ43egSbCjARwQ2hvATgG2BrBRgKUBLBSgMoCxAgwMoK8AHQNoK0ALuArjl+cbqRFwDoyfgKE6/j09AJFI8b7yqJNqAAAAAElFTkSuQmCC"></a>
                 </td>

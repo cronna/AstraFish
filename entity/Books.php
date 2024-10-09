@@ -38,7 +38,7 @@ class Books extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'category_id', 'author_id', 'art', 'deliv_date'], 'required'],
+            [['title', 'category_id', 'price', 'author_id', 'art', 'deliv_date'], 'required'],
             [['description'], 'string'],
             [['category_id', 'author_id', 'art'], 'default', 'value' => null],
             [['category_id', 'author_id', 'art'], 'integer'],
@@ -63,7 +63,8 @@ class Books extends \yii\db\ActiveRecord
             'title' => 'Название',
             'description' => 'Описание',
             'category_id' => 'Категория',
-            'author_id' => 'Автор',
+            'price' => 'Цена',
+            'author_id' => 'Поставщик',
             'deliv_date' => 'Дата поставки',
             'img' => 'Изображение',
             'avail' => 'Есть в наличии',

@@ -17,7 +17,7 @@ use yii\filters\AccessControl;
 /**
  * BooksController implements the CRUD actions for Books model.
  */
-class BooksController extends Controller
+class GdsController extends Controller
 {
     /**
      * @inheritDoc

@@ -10,7 +10,7 @@ use yii\helpers\Html;
  * @var $book
  */
 
-$this->title = 'Возврат книги';
+$this->title = 'Возврат товара';
 $this->params['breadcrumbs'][] = ['label' => 'Refunds', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 

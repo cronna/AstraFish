@@ -12,7 +12,7 @@ use yii\filters\AccessControl;
 /**
  * AuthorsController implements the CRUD actions for Authors model.
  */
-class AuthorsController extends Controller
+class SuppliersController extends Controller
 {
     /**
      * @inheritDoc

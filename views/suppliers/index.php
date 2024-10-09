@@ -9,7 +9,7 @@ use yii\grid\GridView;
 /** @var yii\web\View $this */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Авторы';
+$this->title = 'Поставщики';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="authors-index">
@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Добавить автора', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить поставщика', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
 

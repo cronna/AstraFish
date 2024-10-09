@@ -18,7 +18,7 @@ use app\repository\AuthorsRepository;
  * @var $authors;
  */
 
-$this->title = 'Книги';
+$this->title = 'Товары';
 $this->params['breadcrumbs'][] = $this->title;
 
 $cat = [];
@@ -38,7 +38,7 @@ foreach($authors as $author){
         <h1><?= Html::encode($this->title) ?></h1>
 
         <p>
-            <?= Html::a('Добавить книгу', ['create'], ['class' => 'btn btn-success']) ?>
+            <?= Html::a('Добавить товар', ['create'], ['class' => 'btn btn-success']) ?>
         </p>
     </div>
     <div class="row">
@@ -70,6 +70,8 @@ foreach($authors as $author){
 
                     <td>Дата</td>
 
+                    <td>Цена</td>
+
                     <td> </td>
 
                 </tr>
@@ -85,6 +87,7 @@ foreach($authors as $author){
                         <td><?= CategoryRepository::getCategoryById($model->category_id)->title ?></td>
                         <td><?= AuthorsRepository::getAuthorById($model->author_id)->fio ?></td>
                         <td><?= $model->deliv_date ?></td>
+                        <td><?= $model->price  ?> ₽</td>
                         <td>
                             <a href="view?id=<?= $model->id ?>"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA9UlEQVR4nO2UPQ4BURSFv0I0hkItsRTDdixAiN5Yhh0IVkBlA7qpGBagUJKXnEhw3/OmmSh8yW3euefe9w9/fp02MAQ2wBG4KY4aGyqnNDVgDFyB+5e4Ktd5ougA+4jC97fYyxukC+SGeQn0gIYiBVZGXq4aJglwMEyjwIQmRv5BtT5YeGbuqANz4AwUQKYxx9rwuVovpJ597UnPDM2NOfoer6v5ZOdJSqSfDe0irenxbss0KAztJK0V0yD9sszM0GbSBjFb5DvklbS6mhTGIW9iDjl0TSf4mZa5pqGHttZtSRQDz8yDD62Sr6KSz66S7/pPdTwA4jXIWC41knQAAAAASUVORK5CYII="></a>
                             <a href="update?id=<?= $model->id ?>"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAcUlEQVR4nO2SOwqAMBAFx89t9DiCxzGlB7HxjBZr4QpBtHJftwNLCIEZWALJRQFWhHLzCY+MwFEFzIMhNH7OikgBdqD3+/SILH/l5vMWCZObzwZ0/j5Ey62KtCq5KdZiKS+5li9kv+VGKkctRy1PeOMEwHpzkejzGi8AAAAASUVORK5CYII="></a>

@@ -22,6 +22,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'category_id')->dropDownList($cat) ?>
 
+    <?= $form->field($model, 'price')->input('number') ?>
+
     <?= $form->field($model, 'author_id')->dropDownList($auth) ?>
 
     <?= $form->field($model, 'deliv_date')->input('date', ['value' => date('d.m.Y')]) ?>

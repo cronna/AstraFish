@@ -112,7 +112,55 @@ td{
     justify-content: center;
 }
 
-a[href = '/users/login'], .logout{
-    position: absolute;
-    margin-left: 400px;
+
+.logo{
+    font-weight: 800;
+    align-items: center;
+    line-height: 10px;
+}
+
+.container{
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+.logo h1{
+    font-weight: 800;
+}
+.logo span{
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    margin-top: -7px;
+}
+
+nav ul{
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    list-style-type: none;
+    margin-top: 15px;
+}
+nav ul li a{
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all .3s;
+}
+nav ul li a:hover{
+    color: #999;
 }

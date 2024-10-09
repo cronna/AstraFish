@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'pgsql:host=localhost;dbname=books',
+    'dsn' => 'pgsql:host=localhost;dbname=astrafish',
     'username' => 'postgres',
     'password' => '',
     'charset' => 'utf8',

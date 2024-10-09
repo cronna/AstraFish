@@ -14,7 +14,7 @@ use yii\helpers\Html;
  $st = [];
  $cl = [];
 
-$this->title = 'Выдача';
+$this->title = 'Создать продажу';
 $this->params['breadcrumbs'][] = ['label' => 'Distributions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 

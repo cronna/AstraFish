@@ -22,6 +22,7 @@ class m240624_061008_MainMigrate extends Migration
             'title' => $this->string()->notNull(),
             'description' => $this->text(),
             'category_id' => $this->integer()->notNull(),
+            'price' => $this->integer(),
             'author_id' => $this->integer()->notNull(),
             'deliv_date' => $this->date(),
             'img' => $this->string()->notNull(),

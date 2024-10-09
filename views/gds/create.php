@@ -5,13 +5,16 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var app\models\Books $model */
 
-$this->title = 'Изменение книги: ' . $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Books', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
-
+/**
+ * @var $categories;
+ * @var $authors;
+ */
 $cat = [];
 $auth = [];
+
+$this->title = 'Добавление товара';
+$this->params['breadcrumbs'][] = ['label' => 'Books', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
 
 foreach($categories as $category){
     $cat[$category->id] = $category->title;
@@ -22,7 +25,7 @@ foreach($authors as $author){
 }
 
 ?>
-<div class="books-update">
+<div class="books-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -32,4 +35,4 @@ foreach($authors as $author){
         'auth' => $auth
     ]) ?>
 
-</div>  
+</div>
