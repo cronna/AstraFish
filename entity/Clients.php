@@ -51,7 +51,7 @@ class Clients extends \yii\db\ActiveRecord
             'fio' => 'ФИО',
             'passport_series' => 'Серия паспорта',
             'passport_number' => 'Номер паспорта',
-            'book' => 'Есть книга',
+            'book' => 'Есть товар',
         ];
     }
 

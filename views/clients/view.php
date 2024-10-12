@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?></div>
         <div class="col-6">
-            <h3>Книги</h3>
+            <h3>Товары</h3>
             <table class="table">
                 <tbody>
                     <tr>

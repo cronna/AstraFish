@@ -91,8 +91,6 @@ class GdsController extends Controller
 
             if(empty($model->img)){
                 $model->img = 'book-zagl.jpg';
-            }else{
-                $model->img->saveAs("books_img/{$model->img->baseName}.{$model->img->extension}");
             }
 
             if($model->save()){

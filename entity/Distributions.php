@@ -53,7 +53,7 @@ class Distributions extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'date' => 'Дата',
-            'book_id' => 'Книга',
+            'book_id' => 'Товар',
             'staff_id' => 'Сотрудник',
             'client_id' => 'Клиент',
             'term' => 'Кол-во дней до возврата',
