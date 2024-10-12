@@ -35,6 +35,8 @@ class Clients extends \yii\db\ActiveRecord
             [['fio', 'passport_series', 'passport_number'], 'required'],
             [['passport_series', 'passport_number'], 'default', 'value' => null],
             [['passport_series', 'passport_number'], 'integer'],
+            ['passport_series', 'integer', 'min' => 4, 'max' => 4],
+            ['pussport_number', 'integer', 'min' => 8, 'max' => 8],
             [['book'], 'boolean'],
             [['fio'], 'string', 'max' => 255],
             ['passport_number', 'validatePassport']
