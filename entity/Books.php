@@ -44,7 +44,7 @@ class Books extends \yii\db\ActiveRecord
             [['category_id', 'author_id', 'art'], 'integer'],
             [['deliv_date'], 'safe'],
             [['avail'], 'boolean'],
-            ['art', 'integer', 'min' => 1000], 'max' => 1000000000,
+            ['art', 'integer', 'min' => 1000, 'max' => 1000000000,], 
             [['title'], 'string', 'max' => 255],
             [['img'], 'file', 'extensions' => 'png, jpg, jpeg'],
             [['author_id'], 'exist', 'skipOnError' => true, 'targetClass' => Authors::class, 'targetAttribute' => ['author_id' => 'id']],
